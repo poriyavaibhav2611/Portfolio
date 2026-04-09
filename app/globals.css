@@ -1,26 +1,151 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #070a14;
+  --color-surface: #111a2f;
+  --color-surface-2: #18223b;
+  --color-accent: #4f6fd3;
+  --color-accent-2: #405cb5;
+  --color-accent-contrast: #f3f6ff;
+  --color-text: #e6ebfb;
+  --color-heading: #f3f6ff;
+  --color-muted: #a6b2d2;
+  --color-subtle: #c5cee6;
+  --color-border: rgba(166, 178, 210, 0.24);
+  --color-border-strong: rgba(166, 178, 210, 0.44);
+  --color-panel: rgba(17, 26, 47, 0.72);
+  --color-panel-2: rgba(24, 34, 59, 0.7);
+  --color-cta-shadow: rgba(79, 111, 211, 0.26);
+  --color-nav-bg: rgba(8, 12, 24, 0.78);
+  --color-glow-1: rgba(79, 111, 211, 0.18);
+  --color-glow-2: rgba(64, 92, 181, 0.16);
+  --color-bg-glow-a: rgba(79, 111, 211, 0.16);
+  --color-bg-glow-b: rgba(64, 92, 181, 0.1);
+  --color-contact-bg: linear-gradient(135deg, rgba(16, 26, 48, 0.92), rgba(20, 31, 57, 0.9));
+  --color-scroll-track: #0b1022;
+  --color-scroll-thumb: linear-gradient(180deg, var(--color-accent), var(--color-accent-2));
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="light"] {
+  --color-bg: #f4f7ff;
+  --color-surface: #ffffff;
+  --color-surface-2: #edf2ff;
+  --color-accent: #2f53bc;
+  --color-accent-2: #223f93;
+  --color-accent-contrast: #ffffff;
+  --color-text: #16233f;
+  --color-heading: #0a1731;
+  --color-muted: #31466e;
+  --color-subtle: #21365f;
+  --color-border: rgba(63, 96, 198, 0.24);
+  --color-border-strong: rgba(63, 96, 198, 0.42);
+  --color-panel: rgba(255, 255, 255, 0.92);
+  --color-panel-2: rgba(236, 243, 255, 0.98);
+  --color-cta-shadow: rgba(63, 96, 198, 0.2);
+  --color-nav-bg: rgba(246, 249, 255, 0.9);
+  --color-glow-1: rgba(79, 111, 211, 0.2);
+  --color-glow-2: rgba(63, 96, 198, 0.14);
+  --color-bg-glow-a: rgba(79, 111, 211, 0.2);
+  --color-bg-glow-b: rgba(63, 96, 198, 0.12);
+  --color-contact-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(235, 242, 255, 0.94));
+  --color-scroll-track: #dde6fb;
+  --color-scroll-thumb: linear-gradient(180deg, #86a2ef, #6f8cdf);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at -10% -10%, var(--color-bg-glow-a), transparent 65%),
+    radial-gradient(900px 420px at 100% 0%, var(--color-bg-glow-b), transparent 60%),
+    var(--color-bg);
+  color: var(--color-text);
+  font-family: "Manrope", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", "Trebuchet MS", "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(79, 111, 211, 0.36);
+  color: #f8fafc;
+}
+
+[data-theme="light"] ::selection {
+  color: #0f1a31;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  section {
+    animation: fade-in-up 0.6s ease both;
+  }
+
+  section:nth-of-type(2) {
+    animation-delay: 0.08s;
+  }
+
+  section:nth-of-type(3) {
+    animation-delay: 0.16s;
+  }
+
+  section:nth-of-type(4) {
+    animation-delay: 0.24s;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--color-scroll-thumb);
+}
+
+.page-glow-top {
+  background: radial-gradient(circle at top, var(--color-glow-1), transparent 60%);
+}
+
+.page-glow-bottom {
+  background: radial-gradient(circle at bottom, var(--color-glow-2), transparent 60%);
+}
+
+.contact-panel {
+  background: var(--color-contact-bg);
 }
