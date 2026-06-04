@@ -1,4 +1,4 @@
-﻿export const profile = {
+export const profile = {
   name: "Vaibhav",
   role: "Mern Stack Developer",
   location: "India",
@@ -9,9 +9,10 @@
 
 export const navItems = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Achievements", href: "#achievements" },
+  { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -26,13 +27,14 @@ export const skills = [
   "React",
   "JavaScript",
   "Tailwind CSS",
-  "CSS Modules",
+  "Framer Motion",
   "Node.js",
   "REST APIs",
   "Git & GitHub",
   "Vercel",
   "Figma to Code",
   "SEO Basics",
+  "MongoDB",
 ];
 
 export const projects = [
@@ -60,4 +62,37 @@ export const projects = [
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/example/project-three",
   },
+];
+
+export const achievements = [
+  {
+    metric: "100%",
+    label: "Client Satisfaction",
+    description: "Consistent 5-star ratings on Contra and Upwork."
+  },
+  {
+    metric: "40%",
+    label: "Performance Boost",
+    description: "Average lighthouse score improvement across client sites."
+  },
+  {
+    metric: "10+",
+    label: "Projects Delivered",
+    description: "Successfully shipped high-converting web applications."
+  }
+];
+
+export const experience = [
+  {
+    role: "Freelance Full Stack Developer",
+    company: "Self-Employed",
+    period: "2023 - Present",
+    description: "Building scalable web applications, landing pages, and interactive UIs for global clients using the MERN stack and Next.js."
+  },
+  {
+    role: "Frontend Developer Intern",
+    company: "Tech Solutions Inc.",
+    period: "Jan 2023 - Jun 2023",
+    description: "Developed reusable React components, improved accessibility, and optimized performance for a SaaS dashboard."
+  }
 ];

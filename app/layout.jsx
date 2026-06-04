@@ -1,4 +1,6 @@
-﻿import "./globals.css";
+import SmoothScroll from "../components/layout/SmoothScroll";
+import { CustomCursor } from "../components/ui/CustomCursor";
+import "./globals.css";
 
 export const metadata = {
   title: "Vaibhav | Frontend Developer Portfolio",
@@ -26,7 +28,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <CustomCursor />
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }

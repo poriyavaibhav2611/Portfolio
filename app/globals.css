@@ -24,6 +24,7 @@
   --color-contact-bg: linear-gradient(135deg, rgba(16, 26, 48, 0.92), rgba(20, 31, 57, 0.9));
   --color-scroll-track: #0b1022;
   --color-scroll-thumb: linear-gradient(180deg, var(--color-accent), var(--color-accent-2));
+  --cursor-blend: screen;
 }
 
 [data-theme="light"] {
@@ -50,6 +51,7 @@
   --color-contact-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(235, 242, 255, 0.94));
   --color-scroll-track: #dde6fb;
   --color-scroll-thumb: linear-gradient(180deg, #86a2ef, #6f8cdf);
+  --cursor-blend: multiply;
 }
 
 * {
@@ -57,7 +59,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Removed scroll-behavior: smooth to prevent conflict with Lenis */
 }
 
 body {
@@ -148,4 +150,14 @@ a {
 
 .contact-panel {
   background: var(--color-contact-bg);
+}
+
+.three-bg-container {
+  opacity: 0.6;
+  mix-blend-mode: screen;
+}
+
+[data-theme="light"] .three-bg-container {
+  opacity: 0.8;
+  mix-blend-mode: multiply;
 }
