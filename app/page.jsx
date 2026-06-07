@@ -12,8 +12,7 @@ export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col overflow-x-clip bg-[var(--color-bg)] text-[var(--color-text)]">
       <ThreeBackground />
-      <div className="page-glow-top pointer-events-none absolute inset-x-0 top-[-16rem] h-[30rem] z-0" />
-      <div className="page-glow-bottom pointer-events-none absolute inset-x-0 bottom-0 h-[24rem] z-0" />
+
 
       <Navbar />
       <main className="flex-1 relative z-10">

@@ -1,6 +1,6 @@
 export const profile = {
   name: "Vaibhav",
-  role: "Mern Stack Developer",
+  role: "Full Stack Engineer",
   location: "India",
   email: "hello.vaibhav.dev@gmail.com",
   shortBio:
@@ -17,9 +17,9 @@ export const navItems = [
 ];
 
 export const highlights = [
-  "6+ months building production UIs",
-  "Core Web Vitals focused delivery",
-  "Design system and component architecture",
+  "Pixel-Perfect, High-Converting UIs",
+  "Fast, SEO-Optimized Web Apps",
+  "End-to-End MERN Stack Delivery",
 ];
 
 export const skills = [
@@ -66,33 +66,33 @@ export const projects = [
 
 export const achievements = [
   {
-    metric: "100%",
-    label: "Client Satisfaction",
-    description: "Consistent 5-star ratings on Contra and Upwork."
+    metric: "01",
+    label: "Strategy First",
+    description: "Aligning technical solutions directly with your core business goals."
   },
   {
-    metric: "40%",
-    label: "Performance Boost",
-    description: "Average lighthouse score improvement across client sites."
+    metric: "02",
+    label: "Clean Code",
+    description: "Building scalable and maintainable architecture for long-term growth."
   },
   {
-    metric: "10+",
-    label: "Projects Delivered",
-    description: "Successfully shipped high-converting web applications."
+    metric: "03",
+    label: "Fast Delivery",
+    description: "Optimized workflows ensuring your product reaches the market quickly."
   }
 ];
 
 export const experience = [
   {
-    role: "Freelance Full Stack Developer",
-    company: "Self-Employed",
-    period: "2023 - Present",
-    description: "Building scalable web applications, landing pages, and interactive UIs for global clients using the MERN stack and Next.js."
+    role: "React JS Developer",
+    company: "Abox Agency",
+    period: "May 2026 - Present",
+    description: "Driving frontend development for scalable web applications. While specializing in React, I leverage my full MERN stack expertise to ensure seamless API integrations and robust overall architecture."
   },
   {
-    role: "Frontend Developer Intern",
-    company: "Tech Solutions Inc.",
-    period: "Jan 2023 - Jun 2023",
-    description: "Developed reusable React components, improved accessibility, and optimized performance for a SaaS dashboard."
+    role: "React Developer Intern",
+    company: "Abox Agency",
+    period: "Jan 2026 - Apr 2026",
+    description: "Built and optimized interactive UI components, focused on responsive design, and delivered pixel-perfect features to production."
   }
 ];

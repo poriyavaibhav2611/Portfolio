@@ -50,13 +50,13 @@ export function Navbar() {
               href={item.href}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="relative px-5 py-2 text-sm font-medium text-[var(--color-muted)] transition-colors hover:text-[var(--color-heading)]"
+              className="relative px-5 py-2 text-sm font-medium text-[var(--color-muted)] transition-all hover:font-semibold hover:text-[var(--color-accent-contrast)]"
             >
               <span className="relative z-10">{item.label}</span>
               {hoveredIndex === index && (
                 <motion.span
                   layoutId="nav-hover-pill"
-                  className="absolute inset-0 z-0 rounded-full bg-[var(--color-surface)]/80 shadow-sm border border-[var(--color-border)]/30"
+                  className="absolute inset-0 z-0 rounded-full bg-[var(--color-accent)] shadow-md"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
               )}
@@ -69,10 +69,10 @@ export function Navbar() {
           <ThemeToggle />
           <a
             href="#contact"
-            className="group relative overflow-hidden rounded-full bg-[var(--color-heading)] px-5 py-2 text-sm font-bold text-[var(--color-bg)] transition-transform hover:scale-105 shadow-md"
+            className="group relative overflow-hidden rounded-full bg-[var(--color-accent)] px-5 py-2 text-sm font-semibold text-[var(--color-accent-contrast)] transition-transform hover:scale-105 shadow-md"
           >
             <span className="relative z-10">Hire Me</span>
-            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[var(--color-bg)]/20 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[var(--color-accent-contrast)]/20 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
           </a>
         </div>
       </div>

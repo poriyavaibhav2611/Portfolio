@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 
@@ -61,7 +61,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-panel)] text-[var(--color-heading)] transition hover:border-[var(--color-border-strong)] md:h-auto md:w-auto md:gap-2 md:px-4 md:py-2"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-panel)] text-[var(--color-heading)] transition-all hover:bg-[var(--color-accent)] hover:text-[var(--color-accent-contrast)] hover:border-[var(--color-accent)] md:h-auto md:w-auto md:gap-2 md:px-4 md:py-2"
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
       title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
     >

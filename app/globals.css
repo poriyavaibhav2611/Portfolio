@@ -158,6 +158,7 @@ a {
 }
 
 [data-theme="light"] .three-bg-container {
-  opacity: 0.8;
+  opacity: 1;
   mix-blend-mode: multiply;
+  filter: contrast(1.4) brightness(0.7);
 }

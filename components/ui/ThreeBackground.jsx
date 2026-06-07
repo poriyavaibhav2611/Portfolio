@@ -7,7 +7,7 @@ import { Points, PointMaterial } from "@react-three/drei";
 function ParticleField() {
   const ref = useRef();
   const parallaxRef = useRef();
-  
+
   // Generate random points in a sphere
   const positions = useMemo(() => {
     const count = 3000;
@@ -16,7 +16,7 @@ function ParticleField() {
       const r = 2.5 * Math.cbrt(Math.random()); // Random radius up to 2.5
       const theta = Math.random() * 2 * Math.PI;
       const phi = Math.acos(2 * Math.random() - 1);
-      
+
       positions[i * 3] = r * Math.sin(phi) * Math.cos(theta); // x
       positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta); // y
       positions[i * 3 + 2] = r * Math.cos(phi); // z
@@ -32,7 +32,7 @@ function ParticleField() {
     // Smoothly tilt the outer group based on mouse position (parallax)
     const targetX = (state.pointer.x * Math.PI) / 8;
     const targetY = (state.pointer.y * Math.PI) / 8;
-    
+
     parallaxRef.current.rotation.y += (targetX - parallaxRef.current.rotation.y) * 0.05;
     parallaxRef.current.rotation.x += (-targetY - parallaxRef.current.rotation.x) * 0.05;
   });

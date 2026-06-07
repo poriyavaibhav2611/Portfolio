@@ -85,7 +85,7 @@ export function CustomCursor() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `body { cursor: none; } a, button { cursor: none; }` }} />
-      
+
       {/* Outer Ring (difference blend) */}
       <motion.div
         className="pointer-events-none fixed top-0 left-0 z-[9998] rounded-full"
